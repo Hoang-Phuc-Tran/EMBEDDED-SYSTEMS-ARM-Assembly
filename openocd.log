@@ -1,0 +1,62 @@
+Info : Listening on port 6666 for tcl connections
+Info : Listening on port 4444 for telnet connections
+Info : clock speed 1000 kHz
+Info : STLINK V2J37M26 (API v2) VID:PID 0483:374B
+Info : Target voltage: 2.922420
+Info : stm32f3x.cpu: hardware has 6 breakpoints, 4 watchpoints
+Info : starting gdb server for stm32f3x.cpu on pipe
+Info : accepting 'gdb' connection from pipe
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x210f0000 pc: 0x08007c8a msp: 0x20007f90
+Info : device id = 0x10036422
+Info : flash size = 256kbytes
+Info : Unable to match requested speed 1000 kHz, using 950 kHz
+Info : Unable to match requested speed 1000 kHz, using 950 kHz
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x0800c63c msp: 0x20008000
+Info : halted: PC: 0x0800c640
+Info : halted: PC: 0x0800c642
+Info : halted: PC: 0x0800c64c
+Info : halted: PC: 0x0800c64e
+Info : halted: PC: 0x0800c650
+Info : halted: PC: 0x0800c652
+Info : halted: PC: 0x0800c654
+Info : halted: PC: 0x0800c644
+Info : halted: PC: 0x0800c646
+Info : halted: PC: 0x0800c648
+Error: jtag status contains invalid mode value - communication failure
+Polling target stm32f3x.cpu failed, trying to reexamine
+Examination failed, GDB will be halted. Polling again in 100ms
+Info : Previous state query failed, trying to reconnect
+Error: jtag status contains invalid mode value - communication failure
+Polling target stm32f3x.cpu failed, trying to reexamine
+Examination failed, GDB will be halted. Polling again in 300ms
+Info : Previous state query failed, trying to reconnect
+Error: jtag status contains invalid mode value - communication failure
+Polling target stm32f3x.cpu failed, trying to reexamine
+Examination failed, GDB will be halted. Polling again in 700ms
+Info : Previous state query failed, trying to reconnect
+Error: jtag status contains invalid mode value - communication failure
+Polling target stm32f3x.cpu failed, trying to reexamine
+Examination failed, GDB will be halted. Polling again in 1500ms
+Info : Previous state query failed, trying to reconnect
+Error: jtag status contains invalid mode value - communication failure
+Polling target stm32f3x.cpu failed, trying to reexamine
+Examination failed, GDB will be halted. Polling again in 3100ms
+Info : Previous state query failed, trying to reconnect
+Error: jtag status contains invalid mode value - communication failure
+Polling target stm32f3x.cpu failed, trying to reexamine
+Examination failed, GDB will be halted. Polling again in 6300ms
+Info : Previous state query failed, trying to reconnect
+Error: jtag status contains invalid mode value - communication failure
+Polling target stm32f3x.cpu failed, trying to reexamine
+Examination failed, GDB will be halted. Polling again in 6300ms
+Info : Previous state query failed, trying to reconnect
+Error: jtag status contains invalid mode value - communication failure
+Polling target stm32f3x.cpu failed, trying to reexamine
+Examination failed, GDB will be halted. Polling again in 6300ms
+Info : Previous state query failed, trying to reconnect
+Error: jtag status contains invalid mode value - communication failure
+Polling target stm32f3x.cpu failed, trying to reexamine
+Examination failed, GDB will be halted. Polling again in 6300ms
+shutdown command invoked
