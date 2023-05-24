@@ -78,7 +78,11 @@
     pop {r5}
     bx lr @ Return (Branch eXchange) to the address in the link register (lr)
 
+
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   Assignment 2 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @ Assembly file ended by single .end directive on its own line
@@ -105,18 +109,31 @@
     @ Actual declaration of the symbol
     @ Data section - initialized values
 
-@ Function Declaration : int add_test(int x, int y)
+@ Function Declaration : int pt_led_demo_a2(int count, int delay)
 @
-@ Input: r0, r1 (i.e. r0 holds x, r1 holds y)
+@ Input: r0, r1 (i.e. r0 holds count, r1 holds delay)
 @ Returns: r0
 @
-@ Here is the actual add_test function
+@ Here is the actual pt_led_demo_a2 function
     pt_led_demo_a2:
-    push {r4,r5, lr}    @ push the r4, r5 and lr register on the stack
+    push {r4,r5,r6,lr}    @ push the r4, r5, r6 and lr register on the stack
    
-    
-    pop {r4,r5, lr}      @ pop the r4,r5 and lr register out of the stack
-    bx lr                @ Return (Branch eXchange) to the address in the link register (lr)
+    mov r4, r0            @ copy the count value and save it in r4 
+    mov r5, r1            @ copy the delay value and save it in r5
+    mov r6, #8            @ The r6 holds the LEDs index
+
+    @ This main_loop will repeat 8 LEDs based on the user's input
+    main_loop:
+    subs r4,r4, #1          @ Subtract to count down the loop
+    blt exit_main_loop      @ If r4 < 0, exit the loop
+
+        
+
+
+    @ exit main loop
+    exit_main_loop:
+    pop {r4,r5,r6,lr}        @ pop the r4,r5,r6 and lr register out of the stack
+    bx lr                    @ Return (Branch eXchange) to the address in the link register (lr)
 
 
 

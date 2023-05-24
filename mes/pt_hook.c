@@ -86,9 +86,6 @@ void _pt_A2(int action)
     // Use a default delay value
     delay = 0xFFFFFF;
     }
-    // When we call our function, pass the delay value.
-    // printf(“<<< here is where we call add_test – can you add a third parameter? >>>”);
-    // get inputs from the user
 
     printf("pt_led_demo_a2 returned: %d\n", pt_led_demo_a2(count, delay) );
 }
