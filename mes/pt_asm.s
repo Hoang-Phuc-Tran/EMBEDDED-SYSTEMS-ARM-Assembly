@@ -127,7 +127,29 @@
     subs r4,r4, #1          @ Subtract to count down the loop
     blt exit_main_loop      @ If r4 < 0, exit the loop
 
+        @ This small loop will toggle 8 LEDs
+        loop1:
+        subs r6, r6, #1        @ Subtract to count down the loop
+        blt out                @ if r6 < 0, exit the loop
+
+        mov r0, r6             @ move the led index to r0
+        bl BSP_LED_Toggle      @ cal the BSP_LED_Toggle
         
+        mov r0, r5             @ copy the r5 value to r0
+        bl busy_delay          @ call the busy_delay
+        
+        mov r0, r6             @ move the led index to r0
+        bl BSP_LED_Toggle      @ cal the BSP_LED_Toggle
+
+        mov r0, r5             @ copy the r5 value to r0
+        bl busy_delay          @ call the busy_delay
+
+        b loop1                @ back to the loop1 again
+
+        @ exit small loop1
+        out:
+        mov r6, #8             @ reset the led circle
+        b main_loop            @ go back to the main loop
 
 
     @ exit main loop
