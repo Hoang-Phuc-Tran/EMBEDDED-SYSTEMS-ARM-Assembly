@@ -1,4 +1,8 @@
-<p align="center">https://github.com/Hoang-Phuc-Tran/EMBEDDED-SYSTEMS-ARM-Assembly/assets/120700092/ae902273-a8de-45d1-9145-bc6fe2422d3d</p>
+<p align="center">
+
+https://github.com/Hoang-Phuc-Tran/EMBEDDED-SYSTEMS-ARM-Assembly/assets/120700092/6cbf9f68-dd34-478b-88c0-9d062d513233
+
+</p>
 
 # STM32 LED Toggling Project
 
